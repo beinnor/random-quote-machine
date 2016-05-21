@@ -38,7 +38,7 @@ $(document).ready(function(){
     $("button").click(function(){
 
         readJSON();
-        console.log("qoutes: " + qoutes);
+        console.log("qoutes: " + quotes);
         prepeareNextQuote();
         $(".output").html("<p>" + currentQuote.quote + "</p>" + "<p>" + currentQuote.author + "</p>");
 
