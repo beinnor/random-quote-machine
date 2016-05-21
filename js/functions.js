@@ -61,7 +61,7 @@ $(document).ready(function(){
     }
 
     function readJSON() {
-        $.getJSON("js/quotes.json", function(data, status) {
+        $.getJSON("js/quotesl.json", function(data, status) {
 
             if(status === "success") {
                 quotes = data;
