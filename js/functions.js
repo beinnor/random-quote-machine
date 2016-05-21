@@ -32,10 +32,10 @@ $(document).ready(function(){
         }
     ]};
 
-    var quotes;
+    var allQuotes;
     var currentQuote;
 
-    readJSON();
+    getAllQuotes();
 
     $("button").click(function(){
 
@@ -48,8 +48,8 @@ $(document).ready(function(){
 
     function prepeareNextQuote() {
 
-        var randomNum = Math.floor((Math.random() * quotes.quotesArray.length));
-        currentQuote = quotes.quotesArray[randomNum];
+        var randomNum = Math.floor((Math.random() * allQuotes.quotesArray.length));
+        currentQuote = allQuotes.quotesArray[randomNum];
 
     }
 
@@ -60,10 +60,10 @@ $(document).ready(function(){
 
     }
 
-    function readJSON() {
-        $.getJSON("js/quotesl.json", function(data, status) {
+    function getAllQuotes() {
+        $.getJSON("js/quotesl.json", data, function(data, status) {
 
-            if(status === "success") {
+            if(status === 200) {
                 quotes = data;
             } else {
                 prepareFallbackQuote();
