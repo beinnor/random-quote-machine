@@ -55,7 +55,10 @@ $(document).ready(function(){
     }
 
     function readJSON() {
-        quotes = $.getJSON("js/quotes.json");
+        $.getJSON("js/quotes.json", function(data, status) {
+            console.log(data);
+            console.log(status);
+        });
         console.log(quotes);
     }
 
