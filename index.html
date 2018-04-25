@@ -5,9 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="img/favicon.png">
-  <title>Beinnors Random Quote Machine</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="js/functions.js"></script>
+  <title>Beinnors Random Quote Machine</title>  
 </head>
 
 <body>
@@ -22,14 +20,17 @@
 
   <section>
 
-    <div class="output">
+    <div id="output">
       <p>random qoute goes here</p>
     </div>
 
-    <div class="button">
+    <div>
 
-        <button class="button">Click me</button>
+        <button id="quoteBtn">Click me</button>
 
+    </div>
+    <div>
+      <button id="tweetBtn">Tweet quote</button>
     </div>
   </section>
 
@@ -47,7 +48,7 @@
 
   </footer>
 
-
+  <script src="js/functions.js"></script>
 </body>
 
 </html>
