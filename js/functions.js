@@ -2,7 +2,8 @@
 
 const quoteBtn = document.getElementById("quoteBtn");
 const tweetBtn = document.getElementById("tweetBtn");
-const outputContainer = document.getElementById("output");
+const quoteContainer = document.getElementById("quoteText");
+const authorContainer = document.getElementById("authorText");
 let currentQuote = "default";
 let currentAuthor = "default";
 
@@ -18,8 +19,10 @@ tweetBtn.addEventListener("click", function () {
 });
 
 function writeQuotes(quote, author) {
-  let htmlString = `<p> ${quote}</p><p>${author}</p>`;
-  outputContainer.innerHTML = htmlString;
+  let quoteString = ` ${quote} `;
+  let authorString = ` - ${author} `;
+  quoteContainer.innerHTML = quoteString;
+  authorContainer.innerHTML = authorString;
 }
 
 function getRandomQuoteFromAPI() {

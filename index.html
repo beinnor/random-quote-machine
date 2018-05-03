@@ -7,48 +7,56 @@
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Beinnors Random Quote Machine</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+  <title>Random Quote Machine</title>
 </head>
 
 <body>
 
-  <header>
-    <h1>Random Quote Machine</h1>
-    <p>By Beinnor</p>
-  </header>
 
 
 
 
-  <section>
+  <main>
 
-    <div id="output">
-      <p>random qoute goes here</p>
+
+    <div class="quote">
+      <p>
+        <i class="fas fa-quote-left"></i>
+      </p>
+
+        <p id="quoteText">random qoute goes here</p>
+
+        <p>
+          <i class="fas fa-quote-right"></i>
+        </p>
+
     </div>
 
-    <div>
-
-        <button id="quoteBtn">Click me</button>
-
+    <div class="author">
+      <p id="authorText">random author goes here</p>
     </div>
-    <div>
-      <a id="tweetBtn">Tweet quote</a>
+
+
+    <div class="buttons">
+      <a class="button" id="quoteBtn">New quote</a>
+
+      <a class="button" id="tweetBtn">
+        <i class="fab fa-twitter"></i>
+      </a>
     </div>
-  </section>
-
-
-
-
-
+  </main>
 
 
   <footer>
 
-    <p class="text-center">
-      &copy; Copyright 2016, Beinnor
+    <p>
+      &copy; Copyright 2018, Beinnor
     </p>
 
   </footer>
+
+
 
   <script src="js/data.js"></script>
   <script src="js/functions.js"></script>
