@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/* Variables */
+
+:root {
+
+  /* RGB */
+  --color1: rgba(255, 250, 250, 1);
+  --color2: rgba(191, 188, 188, 1);
+  --color3: rgba(127, 125, 125, 1);
+  --color4: rgba(64, 63, 63, 1);
+  --color5: rgba(234, 229, 229, 1);
+
+  /* colors */
+  --background: var(--color4);
+  --card: var(--color1);
+  --quoteTxt: var(--color4);
+  --authorTxt: var(--color3);
+  --btnBackground: var(--color4);
+  --btnHover: var(--color3);
+  --btnText: var(--color1);
+  --footerTxt: var(--color3);
+  font-size: calc(1vw + 1vh + .5vmin);
+}
+
+/* Style */
+
+html, body {
+  background: var(--background);
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background: var(--card);
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.75);
+  padding: 2%;
+  width: 50%;
+  max-height: 80%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.quote {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: var(--quoteTxt);
+}
+
+.quote p:nth-child(3) {
+  text-align: right;
+}
+
+.author {
+  width: 100%;
+  text-align: right;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  color: var(--authorTxt);
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8rem;
+  color: var(--footerTxt);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--footerTxt);
+}
+
+.button {
+  display: inline;
+  border-radius: 5px;
+  color: var(--btnText);
+  background: var(--btnBackground);
+  /*padding: 10px 20px 10px 20px;*/
+  padding: 3% 7% 3% 7%;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.7rem;
+}
+
+.button:hover {
+  background: var(--btnHover);
+  text-decoration: none;
+}
+
+/* TODO responsiveness goes here */
+
+@media only screen and (max-width: 500px) {
+    main {
+        height: 50%;
+        width: 80%;
+        padding: 4% 4% 2% 4%;
+    }
+}
